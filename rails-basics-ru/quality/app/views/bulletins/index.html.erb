@@ -1,0 +1,6 @@
+<h1>Bulletins</h1>
+<%# BEGIN %>
+<% @bulletins.map do |bulletin| %>
+  <%= link_to bulletin.title, bulletins_path(bulletin) %>
+<% end %>
+<%# END %>

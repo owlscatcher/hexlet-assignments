@@ -1,0 +1,8 @@
+first:
+  title: First Bulletin
+  body: "Body for the first bulletin."
+  published: true
+second:
+  title: Second Bulletin
+  body: "Body for the second bulletin."
+  published: true
