@@ -9,7 +9,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-100.times do |index|
+100.times do |_index|
   Task.create(
     name: Faker::Lorem.sentence,
     status: 'new_task',

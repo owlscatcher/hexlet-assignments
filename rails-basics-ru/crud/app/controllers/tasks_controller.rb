@@ -18,10 +18,10 @@ class TasksController < ApplicationController
 
     if @task.save
       redirect_to @task
-      flash[:success] = "Task created successfully"
+      flash[:success] = 'Task created successfully'
     else
       render :new
-      flash[:failure] = "Task creation failed"
+      flash[:failure] = 'Task creation failed'
     end
   end
 
@@ -34,10 +34,10 @@ class TasksController < ApplicationController
 
     if @task.update(task_params)
       redirect_to task_path(@task)
-      flash[:success] = "Task updated successfully"
+      flash[:success] = 'Task updated successfully'
     else
       render :edit
-      flash[:failure] = "Task update failed"
+      flash[:failure] = 'Task update failed'
     end
   end
 
@@ -46,9 +46,9 @@ class TasksController < ApplicationController
 
     if @task.destroy
       redirect_to tasks_path
-      flash[:success] = "Task deleted successfully"
+      flash[:success] = 'Task deleted successfully'
     else
-      flash[:failure] = "Task deletion failed"
+      flash[:failure] = 'Task deletion failed'
     end
   end
 
@@ -62,7 +62,7 @@ class TasksController < ApplicationController
       :status,
       :creator,
       :performer,
-      :completed,
+      :completed
     )
   end
 end

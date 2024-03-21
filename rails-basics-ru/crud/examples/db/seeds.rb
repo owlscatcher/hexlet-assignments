@@ -7,7 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 10.times do |i|
+  # rubocop:disable Lint/UselessAssignment
   article_index = i + 1
+  # rubocop:enable Lint/UselessAssignment
   Article.create(
     title: Faker::Lorem.sentence,
     body: Faker::Lorem.paragraphs.join("\n\n"),
