@@ -1,0 +1,15 @@
+<% flash.each do |name, msg| %>
+ <div class="alert alert-<%= name %>">
+    <%= msg %>
+ </div>
+<% end %>
+
+<%= form_with model: @task do |f| %>
+  <p><%= f.text_field :name, placeholder: :name %></p>
+  <p><%= f.text_field :description, placeholder: :description %></p>
+  <p><%= f.text_field :status, placeholder: :status %></p>
+  <p><%= f.text_field :creator, placeholder: :creator %></p>
+  <p><%= f.text_field :performer, placeholder: :performer %></p>
+  <p><%= f.text_field :completed, placeholder: :completed %></p>
+  <p><%= f.submit %></p>
+<% end %>

@@ -1,0 +1,15 @@
+<h1><%= @task.name %></h1>
+<p>
+  <%= link_to 'edit',  edit_task_path(@task) %>
+  <%= button_to 'delete', task_path(@task), method: :delete %>
+</p>
+<p>
+  <small><%= @task.status %></small> <small><%= @task.created_at %></small> <%= @task.updated_at %></small>
+</p>
+<p><%= @task.description%></p>
+<p>Creator: <%= @task.creator %></p>
+<% if @task.performer.nil? %>
+  <p>Performer: <strong>---</strong></p>
+<% else %>
+  <p>Performer: <%= @task.performer %></p>
+<% end %>
