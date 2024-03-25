@@ -1,0 +1,12 @@
+h1 Tasks
+
+= link_to 'Create task', new_task_path
+hr
+
+div
+ - @tasks.each do |task|
+    p= link_to task.name, task_path(task)
+    p Creator: #{task.creator}, #{task.created_at}
+    p small Status: #{task.status}
+    p= task.completed
+    hr

@@ -1,0 +1,20 @@
+h1= @task.name
+
+p
+  = link_to 'edit', edit_task_path(@task)
+  = button_to 'delete', task_path(@task), method: :delete
+
+p
+ small = @task.status
+ small = @task.created_at
+ = @task.updated_at
+
+p= @task.description
+
+p Creator: = @task.creator
+
+- if @task.performer.nil?
+  p Performer:
+    strong ---
+- else
+  p Performer: = @task.performer
