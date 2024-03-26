@@ -1,0 +1,8 @@
+h1 Posts
+= link_to 'Create new', new_post_path, class: 'btn btn-primary'
+hr
+- @posts.each do |post|
+  h2= post.title
+  p= post.summary
+  = link_to 'Read', post_path(post), class: 'btn btn-primary'
+  hr

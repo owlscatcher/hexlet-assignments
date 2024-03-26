@@ -1,0 +1,10 @@
+h1= @post.title
+small= @post.created_at
+p= "Published: #{@post.published}"
+p= @post.body
+
+.div.row
+  .col = button_to :Delete, post_path(@post), method: :delete, class: "btn btn-danger"
+  .col = link_to 'Edit', edit_post_path(@post), class: 'btn btn-primary'
+
+
